@@ -7,6 +7,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,
+      whitelist: true, //Hace que solo se agreguen las propiedades que estan en el DTO
     }),
   );
   await app.listen(3000);
